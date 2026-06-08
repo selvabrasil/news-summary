@@ -146,7 +146,9 @@ def run(config_path: str = "sources.yaml", output_dir: str = "summaries", api_ke
     valid_items = [i for i in items if not (i.title.startswith("[") and i.title.endswith("]"))]
     error_items = [i for i in items if i not in valid_items]
     if error_items:
-        print(f"[警告] 跳过 {len(error_items)} 个抓取失败的条目: {[i.source_name for i in error_items]}")
+        print(f"[警告] 跳过 {len(error_items)} 个抓取失败的条目:")
+        for i in error_items:
+            print(f"  - {i.source_name} {i.title}: {i.content}")
 
     # 把"暂无更新"的条目排到末尾，使输出中有内容的来源优先显示
     valid_items.sort(key=lambda i: i.title == "暂无更新")

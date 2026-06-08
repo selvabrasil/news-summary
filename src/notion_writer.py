@@ -117,9 +117,14 @@ def write_to_notion(
     today = date_str or datetime.now().strftime("%Y-%m-%d")
     title = f"📅 {today} 信息简报"
 
+    # Notion 2025-09-03 升级后，databases.query 改为 data_sources.query
+    # 先取 database 拿到 data_source_id
+    db_info = client.databases.retrieve(database_id=db_id)
+    data_source_id = db_info["data_sources"][0]["id"]
+
     # 同一天重复运行时，先 archive 掉已有的同名页面，避免重复
-    existing = client.databases.query(
-        database_id=db_id,
+    existing = client.data_sources.query(
+        data_source_id=data_source_id,
         filter={"property": "title", "title": {"equals": title}},
     )
     for old_page in existing.get("results", []):
@@ -130,7 +135,7 @@ def write_to_notion(
 
     # 创建页面
     page = client.pages.create(
-        parent={"database_id": db_id},
+        parent={"type": "data_source_id", "data_source_id": data_source_id},
         properties={
             "title": {"title": [{"text": {"content": title}}]},
         },

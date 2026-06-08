@@ -155,7 +155,8 @@ def summarize(
                     ],
                 )
                 return response.choices[0].message.content
-            except RateLimitError:
+            except RateLimitError as e:
+                print(f"[Kimi 429] attempt {attempt + 1}/3: {e}")
                 if attempt < 2:
                     time.sleep(30 * (attempt + 1))
                     continue
@@ -164,7 +165,8 @@ def summarize(
 
     try:
         return _call_api(content)
-    except RateLimitError:
+    except RateLimitError as e:
+        print(f"[Kimi fallback] 三次重试后仍 429，返回占位符。原始错误: {e}")
         fallback = {
             "zh": "今日摘要生成失败：API 负载过高，请稍后重试。",
             "en": "Summary generation failed: API engine overloaded. Please try again later.",

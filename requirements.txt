@@ -2,7 +2,7 @@ openai>=1.0.0
 feedparser>=6.0.0
 PyYAML>=6.0.0
 trafilatura>=1.6.0
-notion-client>=2.0.0
+notion-client>=3.0.0
 
 # YouTube transcript (via RSS + youtube-transcript-api)
 youtube-transcript-api>=0.6.0

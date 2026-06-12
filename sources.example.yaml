@@ -4,7 +4,7 @@
 # 所有 RSS URL 均已验证可用（2026-03-22）
 
 # 输出语言：zh（中文）| en（English）| bilingual（中英双语交错）
-language: zh
+language: en
 
 sources:
 
@@ -251,3 +251,123 @@ sources:
 # telegram:
 #   bot_token: "123456789:AAFxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #   chat_id: "123456789"   # 个人 chat ID 或群组负数 ID
+# Canais de notícias no mundo
+type: rss
+name: "G1 - Brasil"
+url: "https://g1.globo.com/dynamo/rss2.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "Clarín - Argentina"
+url: "https://www.clarin.com/rss/lo-ultimo/"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "Granma - Cuba"
+url: "https://www.granma.cu/feed"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "Tehran Times - Iran"
+url: "https://www.tehrantimes.com/rss"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "The Jerusalem Post - Israel"
+url: "https://www.jpost.com/rss"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "ABC News - Austrália"
+url: "https://www.abc.net.au/news/feed/51120/rss.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "CBC News - Canadá"
+url: "https://www.cbc.ca/cctoc/blogs/rss/podcasts/arts/q"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "Le Monde - França"
+url: "https://www.lemonde.fr/rss/une.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "Deutsche Welle (DW) - Alemanha"
+url: "https://rss.dw.com/xml/rss-de-all"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "Corriere della Sera - Itália"
+url: "http://xml2.corriere.it/rss/homepage.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "El País - Espanha"
+url: "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "BBC News - Inglaterra"
+url: "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "The Japan Times - Japão"
+url: "https://www.japantimes.co.jp/feed/"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "Xinhua Net - China"
+url: "https://www.xinhuanet.com/english/rss/worldrss.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "CNN - EUA"
+url: "http://rss.cnn.com/rss/cnn_topstories.rss"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "El Universal - México"
+url: "https://www.eluniversal.com.mx/rss.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "El Comercio - Peru"
+url: "https://elcomercio.pe/arc/outboundfeeds/rss/?outputType=xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "El Deber - Bolívia"
+url: "https://eldeber.com.bo/rss/noticias.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "Telesur - Venezuela"
+url: "https://www.telesurtv.net/rss/RssLatinoamerica.xml"
+max_entries: 3
+fetch_fulltext: true
+
+type: rss
+name: "El Tiempo - Colômbia"
+url: "https://www.eltiempo.com/rss/cultura.xml"
+max_entries: 3
+fetch_fulltext: true
